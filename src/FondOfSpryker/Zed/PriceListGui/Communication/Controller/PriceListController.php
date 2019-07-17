@@ -50,7 +50,7 @@ class PriceListController extends AbstractController
      *
      * @return array|\Symfony\Component\HttpFoundation\RedirectResponse
      */
-    public function createAction(Request $request): RedirectResponse
+    public function createAction(Request $request)
     {
         $priceListForm = $this->getFactory()
             ->createPriceListForm()
