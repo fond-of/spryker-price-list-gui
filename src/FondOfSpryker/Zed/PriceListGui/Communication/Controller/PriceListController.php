@@ -6,7 +6,6 @@ use Exception;
 use FondOfSpryker\Zed\PriceListGui\Communication\Form\PriceListForm;
 use Generated\Shared\Transfer\PriceListTransfer;
 use Spryker\Zed\Kernel\Communication\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
 
@@ -63,7 +62,7 @@ class PriceListController extends AbstractController
                 $priceListTransfer = (new PriceListTransfer())->fromArray($formData, true);
 
                 $priceListTransfer = $this->getFactory()->getPriceListFacade()
-                    ->persistPriceList($priceListTransfer);
+                    ->createPriceList($priceListTransfer);
 
                 $this->addSuccessMessage(
                     sprintf('Price list "%s" successfully added.', $formData[PriceListForm::FIELD_NAME])
@@ -115,7 +114,7 @@ class PriceListController extends AbstractController
         if ($priceListForm->isSubmitted() && $priceListForm->isValid()) {
             try {
                 $priceListTransfer = $this->getFactory()->getPriceListFacade()
-                    ->persistPriceList($priceListTransfer);
+                    ->updatePriceList($priceListTransfer);
 
                 $this->addSuccessMessage(
                     sprintf('Price list "%s" successfully updated.', $formData[PriceListForm::FIELD_NAME])
