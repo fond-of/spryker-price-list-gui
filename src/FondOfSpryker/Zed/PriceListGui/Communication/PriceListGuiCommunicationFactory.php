@@ -26,8 +26,6 @@ class PriceListGuiCommunicationFactory extends AbstractCommunicationFactory
     }
 
     /**
-     * @throws
-     *
      * @return \Orm\Zed\PriceList\Persistence\FosPriceListQuery
      */
     protected function getPriceListPropelQuery(): FosPriceListQuery
@@ -36,8 +34,6 @@ class PriceListGuiCommunicationFactory extends AbstractCommunicationFactory
     }
 
     /**
-     * @throws
-     *
      * @return \FondOfSpryker\Zed\PriceListGui\Dependency\Facade\PriceListGuiToPriceListFacadeInterface
      */
     public function getPriceListFacade(): PriceListGuiToPriceListFacadeInterface
@@ -65,8 +61,6 @@ class PriceListGuiCommunicationFactory extends AbstractCommunicationFactory
     }
 
     /**
-     * @throws
-     *
      * @return \FondOfSpryker\Zed\PriceListGui\Dependency\Service\PriceListGuiToUtilDateTimeServiceInterface
      */
     protected function getUtilDateTimeService(): PriceListGuiToUtilDateTimeServiceInterface
