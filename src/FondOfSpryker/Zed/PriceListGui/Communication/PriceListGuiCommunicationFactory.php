@@ -4,9 +4,9 @@ namespace FondOfSpryker\Zed\PriceListGui\Communication;
 
 use FondOfSpryker\Zed\PriceListGui\Communication\Form\DataProvider\PriceListFormDataProvider;
 use FondOfSpryker\Zed\PriceListGui\Communication\Form\PriceListForm;
+use FondOfSpryker\Zed\PriceListGui\Communication\Table\PriceListTable;
 use FondOfSpryker\Zed\PriceListGui\Dependency\Facade\PriceListGuiToPriceListFacadeInterface;
 use FondOfSpryker\Zed\PriceListGui\Dependency\Service\PriceListGuiToUtilDateTimeServiceInterface;
-use FondOfSpryker\Zed\PriceListGui\Communication\Table\PriceListTable;
 use FondOfSpryker\Zed\PriceListGui\PriceListGuiDependencyProvider;
 use Orm\Zed\PriceList\Persistence\FosPriceListQuery;
 use Spryker\Zed\Kernel\Communication\AbstractCommunicationFactory;
